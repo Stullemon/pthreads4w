@@ -1,3 +1,21 @@
+2019-11-03  Ross Johnson <ross dot johnson at homemail dot com dot au>
+
+	* NOTICE: Remove third party code acknowledgments because files have been
+	removed from distro.
+
+2018-08-19  Ross Johnson <ross dot johnson at homemail dot com dot au>
+
+	* context.h (__PTW32_PROCPTR): Added missing '__' prefix for v3.
+
+2018-08-10  Ross Johnson <ross dot johnson at homemail dot com dot au>
+
+	* Makefile (clean): remove *.idb files.
+	* dll.c: replace 'extern "C"' with macros __PTW32_BEGIN_C_DECLS/__PTW32_BEGIN_C_DECLS
+	for consistency tidy-up; add comment re __ptw32_autostatic_anchor() function;
+	make our static constructor/destructors "extern" to avoid optimisers.
+	* implement.h (__ptw32_autostatic_anchor): add __PTW32_BEGIN_C_DECLS/__PTW32_BEGIN_C_DECLS
+	envelope.
+
 2018-08-08  Ross Johnson <ross dot johnson at homemail dot com dot au>
 
 	* Makefile: "nmake realclean VC VC-static" and similar wasn't remaking pthread.obj.
